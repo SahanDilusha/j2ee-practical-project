@@ -12,5 +12,10 @@
 </head>
 <body>
 <h1>Home</h1>
+
+<a href="/login.jsp">Login</a>
+
+<a href="/register.jsp">Register</a>
+
 </body>
 </html>
