@@ -24,6 +24,12 @@
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-web-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>lk.jiat.ee</groupId>
+            <artifactId>ejb</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>

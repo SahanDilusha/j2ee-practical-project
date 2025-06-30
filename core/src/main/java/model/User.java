@@ -1,10 +1,15 @@
-package lk.jiat.ee.ejb.model;
+package model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "users")
-public class User {
+@NamedQueries({
+        @NamedQuery(name = "findByEmail", query = "SELECT u FROM User u WHERE u.email = ?1")
+})
+public class User implements Serializable {
 
     @Id
     @Column(name = "id")
@@ -20,10 +25,20 @@ public class User {
     @Column(name = "password", length = 45, nullable = false)
     private String password;
 
+    @Column(name = "contact", length = 10, unique = true, nullable = false)
+    private String contact;
+
     @Enumerated(EnumType.STRING)
     private UserType userType = UserType.USER;
 
     public User() {
+    }
+
+    public User(String name, String email, String password, String contact) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.contact = contact;
     }
 
     public UserType getUserType() {

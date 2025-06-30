@@ -5,7 +5,7 @@
 
         <jta-data-source>jiat/EJBModuleUnitResource</jta-data-source>
 
-        <class>lk.jiat.ee.ejb.model.User</class>
+        <class>model.User</class>
 
         <properties>
             <property name="jakarta.persistence.schema-generation.database.action" value="create"/>

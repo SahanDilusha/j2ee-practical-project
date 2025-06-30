@@ -9,9 +9,7 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>ejb</artifactId>
-    <packaging>ejb</packaging>
-    <name>j2ee-practical-project-ejb</name>
+    <artifactId>core</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -21,25 +19,11 @@
 
     <dependencies>
         <dependency>
-            <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>lk.jiat.ee</groupId>
-            <artifactId>core</artifactId>
-            <version>1.0</version>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <finalName>${project.name}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-ear-plugin</artifactId>
-                <version>3.3.0</version>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
